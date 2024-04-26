@@ -7,7 +7,10 @@ units_dict = tau_units.tau_units
 
 def random_unit_select(tau_units):
     unit_name = random.choice(list(tau_units.keys()))
-    points = tau_units[unit_name]
+    unit_info = tau_units[unit_name]
+    min_points = unit_info["Minimum"]
+    max_points = unit_info["Maximum"]
+    points = random.randint(min_points, max_points)
     return unit_name, points
 
 
@@ -21,11 +24,10 @@ points_goal = int(input("Please enter your desired army size as a number: "))
 print("Desired army size:", points_goal, "points.")
 
 UnitList = {'Selected Units': [selected_units], 'Total Points': [total_points]}
+#TODO UnitList currently appends the full list to first cell, fix
 
-# Loop until the total points exceed or reach the desired goal
 while total_points < points_goal:
     selected_unit, points = random_unit_select(units_dict)
-    print("Selected unit:", selected_unit, "- points of selected unit:", points)
     UnitList['Selected Units'].append(selected_unit)
     UnitList['Total Points'].append(points)
     df = pd.DataFrame(UnitList)
@@ -35,7 +37,4 @@ while total_points < points_goal:
         total_points += points
     else:
         break
-
-# Print the selected units and total points
-print("Selected units:", selected_units)
-print("Total points:", total_points)
+print("Your army has been added to the file.")
