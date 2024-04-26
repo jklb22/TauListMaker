@@ -1,28 +1,106 @@
 tau_units = {
-    "Commander": 170,
-    "Ethereal": 60,
-    "Cadre Fireblade": 42,
-    "Shadowsun": 170,
-    "Fire Warrior Strike Team": 35,
-    "Breacher Team": 35,
-    "Pathfinder Team": 40,
-    "XV8 Crisis Battlesuit Team": 60,
-    "XV25 Stealth Battlesuit Team": 60,
-    "XV95 Ghostkeel Battlesuit": 100,
-    "XV104 Riptide Battlesuit": 170,
-    "XV88 Broadside Battlesuit": 100,
-    "TX4 Piranha": 70,
-    "TY7 Devilfish": 80,
-    "TY7 Sky Ray Gunship": 130,
-    "TX7 Hammerhead Gunship": 150,
-    "Tiger Shark Fighter-Bomber": 300,
-    "Sun Shark Bomber": 190,
-    "Razorshark Strike Fighter": 160,
-    "AX39 Sun Shark Bomber": 200,
-    "XV109 Y'vahra Battlesuit": 220,
-    "KV128 Stormsurge": 400,
-    "Tidewall Shieldline": 120,
-    "Tidewall Droneport": 120,
-    "Tidewall Gunrig": 120,
-    "Tidewall Rampart": 120,
+    "Commander": {
+        "Minimum": 50,
+        "Maximum": 100
+    },
+    "Ethereal":  {
+        "Minimum": 60,
+        "Maximum": 95
+    },
+    "Cadre Fireblade": {
+        "Minimum": 42,
+        "Maximum": 86
+    },
+    "Shadowsun":  {
+        "Minimum": 170,
+        "Maximum": 200
+    },
+    "Fire Warrior Strike Team":  {
+        "Minimum": 35,
+        "Maximum": 65
+    },
+    "Breacher Team":  {
+        "Minimum": 46,
+        "Maximum": 64
+    },
+    "Pathfinder Team":  {
+        "Minimum": 40,
+        "Maximum": 55
+    },
+    "XV8 Crisis Battlesuit Team":  {
+        "Minimum": 60,
+        "Maximum": 80
+    },
+    "XV25 Stealth Battlesuit Team":  {
+        "Minimum": 60,
+        "Maximum": 70
+    },
+    "XV95 Ghostkeel Battlesuit":  {
+        "Minimum": 100,
+        "Maximum": 120
+    },
+    "XV104 Riptide Battlesuit":  {
+        "Minimum": 170,
+        "Maximum": 200
+    },
+    "XV88 Broadside Battlesuit":  {
+        "Minimum": 100,
+        "Maximum": 130
+    },
+    "TX4 Piranha":  {
+        "Minimum": 70,
+        "Maximum": 78
+    },
+    "TY7 Devilfish":  {
+        "Minimum": 80,
+        "Maximum": 86
+    },
+    "TY7 Sky Ray Gunship":  {
+        "Minimum": 130,
+        "Maximum": 148
+    },
+    "TX7 Hammerhead Gunship":  {
+        "Minimum": 150,
+        "Maximum": 153
+    },
+    "Tiger Shark Fighter-Bomber":   {
+        "Minimum": 130,
+        "Maximum": 148
+    },
+    "Sun Shark Bomber":   {
+        "Minimum": 190,
+        "Maximum": 210
+    },
+    "Razorshark Strike Fighter":   {
+        "Minimum": 160,
+        "Maximum": 187
+    },
+    "AX39 Sun Shark Bomber": {
+        "Minimum": 200,
+        "Maximum": 214
+    },
+    "XV109 Y'vahra Battlesuit": {
+        "Minimum": 200,
+        "Maximum": 202
+    },
+    "KV128 Stormsurge": {
+        "Minimum": 400,
+        "Maximum": 418
+    },
+    "Tidewall Shieldline": {
+        "Minimum": 120,
+        "Maximum": 136
+    },
+    "Tidewall Droneport": {
+        "Minimum": 120,
+        "Maximum": 122
+    },
+    "Tidewall Gunrig": {
+        "Minimum": 120,
+        "Maximum": 129
+    },
+    "Tidewall Rampart": {
+        "Minimum": 126,
+        "Maximum": 187
+    },
 }
