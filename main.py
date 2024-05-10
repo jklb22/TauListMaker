@@ -1,8 +1,10 @@
 import random
-import tau_units
 import pandas as pd
+import tau_units
+import tau_upgrades
 
 units_dict = tau_units.tau_units
+unit_upgrades = tau_upgrades.tau_weapon_upgrades
 
 
 def random_unit_select(tau_units):
@@ -14,27 +16,33 @@ def random_unit_select(tau_units):
     return unit_name, points
 
 
+def upgrade_select(tau_weapon_upgrades):
+    random_upgrade_name = random.choice(list(tau_weapon_upgrades.keys()))
+    upgrade_cost = tau_weapon_upgrades[random_upgrade_name]
+    return random_upgrade_name, upgrade_cost
+
+
 total_points = 0
 selected_units = []
 
-# acquire how many units user would like, in points
+# Acquire how many units user would like, in points
 points_goal = int(input("Please enter your desired army size as a number: "))
-
-# Print the input value to verify
 print("Desired army size:", points_goal, "points.")
 
-UnitList = {'Selected Units': [selected_units], 'Total Points': [total_points]}
-#TODO UnitList currently appends the full list to first cell, fix
+UnitList = {'Selected Units': [], 'Total Points': []}
 
 while total_points < points_goal:
-    selected_unit, points = random_unit_select(units_dict)
-    UnitList['Selected Units'].append(selected_unit)
-    UnitList['Total Points'].append(points)
-    df = pd.DataFrame(UnitList)
-    df.to_csv('Tau Units.csv', index=False)
-    if total_points + points <= points_goal:
-        selected_units.append(selected_unit)
-        total_points += points
+    selected_unit, unit_points = random_unit_select(units_dict)
+    random_upgrade_name, upgrade_cost = upgrade_select(unit_upgrades)
+
+    if total_points + unit_points + upgrade_cost <= points_goal:
+        selected_units.append([selected_unit, unit_points, random_upgrade_name, upgrade_cost])
+        total_points += unit_points + upgrade_cost
     else:
         break
+
+df = pd.DataFrame(selected_units, columns=['Unit', 'Unit Points', 'Upgrade', 'Upgrade Points'])
+df['Total Points'] = df['Unit Points'] + df['Upgrade Points']
+df.to_csv('Tau Units.csv', index=False)
+
 print("Your army has been added to the file.")
