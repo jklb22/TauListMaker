@@ -46,7 +46,3 @@ df['Total Points'] = df['Unit Points'] + df['Upgrade Points']
 df.to_csv('Tau Units.csv', index=False)
 
 print("Your army has been added to the file.")
-
-    else:
-        break
-print("Your army has been added to the file.")
